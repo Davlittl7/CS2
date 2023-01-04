@@ -1,0 +1,7 @@
+Davonte Littleton 
+4/27/2021
+
+std::vector<int, std::allocator<int> >::operator[](unsigned long) was the function that took the longest. This is because it took roughly 31% of the time to compile as it was called
+so many times. This leads into why a function like this and functions in general are like bottlenecks. As bottlenecks hold things back, so this function (which serves as our bottleneck) that has to be called so much
+time, we have a less efficient program. This goes for other functions that can also be inefficient, as they also hamper the function's runtime. So in this case, the function that took the longest was our bottleneck.
+So, with this profiler and others like it, we can find functions like this that take a long time to execute, and attempt to fix them.  
